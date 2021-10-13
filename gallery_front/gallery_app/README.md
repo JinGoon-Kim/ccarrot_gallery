@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 
+아무거나 썹소ㅔ요
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
