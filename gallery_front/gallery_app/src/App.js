@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import './css/tailwind.css';
+import { useState } from 'react';
+
+
 
 function App() {
+  // [a,b] = [10, 100];
+  //useState는 항상 두개의 데이터를 준다.
+
+  //useState는 사이트내에서 바뀔때 새로고침없이 재 랜더링 해준다. 변경이 될 데이터들을 state를 만들어서 넣어준다.
+  let [글제목, 글제목변경] = useState('HIHI');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="nav">
+        CCARROT
       </header>
+      <h3>
+        { 글제목 }
+      </h3>
     </div>
   );
 }
