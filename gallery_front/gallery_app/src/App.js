@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import './css/tailwind.css';
+import './css/App.scss';
 import { useState } from 'react';
 
 
@@ -17,9 +18,10 @@ function App() {
       <header className="nav">
         CCARROT
       </header>
-      <h3>
+      <h3 className="text">
         { 글제목 }
       </h3>
+      <figure><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></figure>
     </div>
   );
 }
