@@ -1,14 +1,34 @@
 package ccarrot.member;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.Data;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 public class Member {
 
     @Id
     private Long id;
-    private String name;
+
+    @Column(name = "name")
+    private String username;
+
+    private Integer age;
+
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime createdDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime lastModifiedDate;
+
+    @Lob
+    private String description;
+
 
     public Long getId() {
         return id;
