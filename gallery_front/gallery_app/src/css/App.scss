@@ -1,31 +1,62 @@
 $body_color: #eee;
 
 $size: 66.6666vmin;
+* {
+  box-sizing: border-box;
+}
 body {
-  background: #0a0a0a;
+  background: #dbdbdb;
 }
 
-figure {
-  width: $size;
-  transform: translate(calc(50vw - #{$size / 2}), calc(50vh - #{$size / 2}));
+.form_test {
+  width: 90%;
+  margin: 0 auto;
+}
+.request_button {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  color: #fff;
 }
 
-figure div {
+.form_example_get {
+  width: 25%;
+  text-align: center;
   display: inline-block;
-  padding: $size / 3 / 2;
-  vertical-align: top;
-  border-radius: 0 0 50% 50%;
+}
 
-  @for $i from 1 through 9 {
-    &:nth-child(#{$i}) {
-      $array: transparent, #9e0142, #d13b4b, #f0704a, #fcab63, #fedc8c, #fbf8b0,
-        #e0f3a1, #aadda2, #69bda9, #4288b5, #4288b5;
-      $start: nth($array, length($array) - 1);
-      $middle: nth($array, $i);
-      $end: nth($array, 1);
+.form_example_get .request_button {
+  background-color: #35bbca;
+}
 
-      background: conic-gradient($array);
-      transform: rotate($i * 90deg) scale(0.9);
-    }
-  }
+.form_example_put {
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+.form_example_put .request_button {
+  background-color: #0191b4;
+}
+
+.form_example_delete {
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+.form_example_delete .request_button {
+  background-color: #fe7a15;
+}
+
+.form_example4_post {
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+.form_example4_post .request_button {
+  background-color: #984063;
 }
