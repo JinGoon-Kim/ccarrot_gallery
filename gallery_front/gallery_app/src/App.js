@@ -21,7 +21,28 @@ function App() {
       <h3 className="text">
         { 글제목 }
       </h3>
-      <figure><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></figure>
+      
+      <section class="form_test">
+        <form action="localhost:8070/api_test" method="get" class="form_example_get">
+          <input type="text" value="hellow word! get">
+          <button class="request_button" type="button">GET</button>
+        </form>
+
+        <form action="localhost:8070/api_test" method="put" class="form_example_put">
+        <input type="text" value="hellow word! put">
+          <button class="request_button" type="button">PUT</button>
+        </form>
+
+        <form action="localhost:8070/api_test" method="delete" class="form_example_delete">
+          <input type="text" value="hellow word! delete">
+          <button class="request_button" type="button">DELETE</button>
+        </form>
+
+        <form action="localhost:8070/api_test" method="post" class="form_example4_post">
+          <input type="text" value="hellow word! post">
+          <button class="request_button" type="button">POST</button>
+        </form>
+      </section>
     </div>
   );
 }
