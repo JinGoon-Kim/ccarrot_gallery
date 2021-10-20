@@ -28,22 +28,22 @@ function App() {
       <section class="form_test">
         <form action="localhost:8070/api_test" method="get" class="form_example_get">
           <input value={_get}/>
-          <button class="request_button" type="button">GET</button>
+          <button class="request_button" type="submit">GET</button>
         </form>
 
         <form action="localhost:8070/api_test" method="put" class="form_example_put">
           <input value={_put}/>
-          <button class="request_button" type="button">PUT</button>
+          <button class="request_button" type="submit">PUT</button>
         </form>
 
         <form action="localhost:8070/api_test" method="delete" class="form_example_delete">
           <input value={_delete}/>
-          <button class="request_button" type="button">DELETE</button>
+          <button class="request_button" type="submit">DELETE</button>
         </form>
 
         <form action="localhost:8070/api_test" method="post" class="form_example4_post">
           <input value={_post}/>
-          <button class="request_button" type="button">POST</button>
+          <button class="request_button" type="submit">POST</button>
         </form>
       </section>
     </div>
