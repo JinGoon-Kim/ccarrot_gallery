@@ -12,10 +12,10 @@ SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
 /login -> Login <br>
 /search -> Search <br>
 <br>
-/users/:id -> See user <br>
-/users/logout -> Log Out <br>
-/users/edit -> Edit My Profile <br>
-/users/delete -> Delete My Profile <br>
+/members/:id -> See user <br>
+/members/logout -> Log Out <br>
+/members/edit -> Edit My Profile <br>
+/members/delete -> Delete My Profile <br>
 <br>
 /gallery/:id -> See gallery <br>
 /gallery/:id/edit -> Edit artwork <br>
