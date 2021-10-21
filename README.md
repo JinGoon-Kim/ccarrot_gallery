@@ -23,3 +23,6 @@ SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
 /gallery/upload -> Upload artwork <br>
 /gallery/comments -> Comment on a artwork <br>
 /gallery/comments/delete -> Delete A Comment of a artwork <br>
+
+### 엔티티 구조도
+![엔티티 구조도](https://github.com/JinGoon-Kim/ccarrot_gallery/blob/main/Entity_diagram.png)
