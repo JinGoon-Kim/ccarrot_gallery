@@ -1,4 +1,4 @@
-package ccarrot.member;
+package ccarrot.Repositories;
 
 public enum RoleType {
     USER, ADMIN
