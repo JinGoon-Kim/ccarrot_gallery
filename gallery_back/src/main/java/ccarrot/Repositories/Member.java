@@ -20,6 +20,7 @@ public class Member {
     private Long id;
 
     @Column(name = "member_type")
+    @Enumerated(EnumType.STRING)
     private RoleType member_type;
 
     @Column(name = "member_id")
