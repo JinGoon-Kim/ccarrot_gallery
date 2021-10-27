@@ -13,7 +13,7 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_seq")
     @OneToMany
-    private Long member_seq;
+    private Long id;
 
     @Column(name = "member_type")
     private RoleType member_type;

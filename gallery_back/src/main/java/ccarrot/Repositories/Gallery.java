@@ -11,15 +11,12 @@ public class Gallery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "gallery_seq")
-    private long gallery_seq;
+    private long id;
 
+    @ManyToOne
     @Column(name = "member_seq")
-    @JoinColumn(name = "Member")
-    private long member_seq;
-
-    @Column(name = "gallery_seq")
-    @JoinColumn(name = "File")
-    private String file_seq;
+    @JoinColumn(name = "member_seq")
+    private Member member_seq;
 
     @Column(name = "gallery_title")
     private String gallery_title;
