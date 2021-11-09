@@ -1,4 +1,4 @@
-package ccarrot.Repositories;
+package ccarrot.domain;
 
 import lombok.*;
 import org.hibernate.Hibernate;
