@@ -1,4 +1,4 @@
-package ccarrot.Repositories;
+package ccarrot.domain;
 
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -11,30 +11,34 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-public class Gallery {
+public class File {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "gallery_seq")
+    @Column(name = "file_seq")
+    @ToString.Exclude
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_seq")
+    @JoinColumn(name="gallery_seq")
     @ToString.Exclude
-    private Member member_seq;
+    private Gallery gallery_seq;
 
-    @Column(name = "gallery_title")
-    private String gallery_title;
+    @Column(name = "file_dir")
+    private String file_dir;
 
-    @Column(name = "gallery_content")
-    private Lob gallery_content;
+    @Column(name = "file_name")
+    private String file_name;
+
+    @Column(name = "file_type")
+    private FileType file_type;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Gallery gallery = (Gallery) o;
-        return Objects.equals(id, gallery.id);
+        File file = (File) o;
+        return Objects.equals(id, file.id);
     }
 
     @Override
