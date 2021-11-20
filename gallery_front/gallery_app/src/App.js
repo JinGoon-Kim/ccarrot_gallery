@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import './css/tailwind.css';
 import './css/App.scss';
