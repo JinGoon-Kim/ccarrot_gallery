@@ -1,0 +1,29 @@
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { background: #dbdbdb; }
+
+.form_test { width: 90%; margin: 0 auto; }
+
+.request_button { width: 95%; margin: 0 auto; padding-top: 10px; padding-bottom: 10px; border-radius: 3px; color: #fff; }
+
+.form_example_get { width: 25%; text-align: center; display: inline-block; }
+
+.form_example_get .request_button { background-color: #35bbca; }
+
+.form_example_put { width: 25%; text-align: center; display: inline-block; }
+
+.form_example_put .request_button { background-color: #0191b4; }
+
+.form_example_delete { width: 25%; text-align: center; display: inline-block; }
+
+.form_example_delete .request_button { background-color: #fe7a15; }
+
+.form_example4_post { width: 25%; text-align: center; display: inline-block; }
+
+.form_example4_post .request_button { background-color: #984063; }
+
+header { width: 50%; padding-bottom: 10px; height: 60px; }
+
+header h1 { padding-left: 20px; font-size: 25px; line-height: 60px; }
+
+/*# sourceMappingURL=App.css.map */
