@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import './css/tailwind.css';
-import './css/App.scss';
-import { useState } from 'react';
-
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Index from "./pages/index.js";
 
 
 function App() {
-  // [a,b] = [10, 100];
-  //useState는 항상 두개의 데이터를 준다.
-
-  //useState는 사이트내에서 바뀔때 새로고침없이 재 랜더링 해준다. 변경이 될 데이터들을 state를 만들어서 넣어준다.
-  let [_get, get변경] = useState('hellow Word _get');
-  let [_put, put변경] = useState('hellow Word _put');
-  let [_delete, delete변경] = useState('hellow Word _delete');
-  let [_post, post변경] = useState('hellow Word _post');
-
   return (
+<<<<<<< HEAD
     <div className="App">
       <header>
         <h1>CCARROT</h1>
@@ -48,6 +43,14 @@ function App() {
       </section>
     </div>
   );
+=======
+    <Router>
+      <Routes>
+        <Route path='/' element={<Index />} />
+      </Routes>
+    </Router>
+  )
+>>>>>>> main
 }
 
 export default App;
