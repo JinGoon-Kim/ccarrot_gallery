@@ -11,14 +11,7 @@ class Home extends React.Component{
     render(){
         return(
             <div id="fdf" data-scroll-container>
-                <section data-scroll-section>
-                    <h1>You should learn</h1>
-                    <p>👋</p>
-                </section>
-                <section className="section2" id="my-section" data-scroll-section>
-                    <h1>What's up?</h1>
-                    <p>😬</p>
-                </section>
+               asdf
             </div>
 
         );

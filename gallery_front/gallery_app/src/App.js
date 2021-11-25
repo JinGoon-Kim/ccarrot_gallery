@@ -6,17 +6,16 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Main from "./routes/Home";
+import Index from "./pages/index.js";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route path='/' element={<Index />} />
       </Routes>
     </Router>
-
   )
 }
 
