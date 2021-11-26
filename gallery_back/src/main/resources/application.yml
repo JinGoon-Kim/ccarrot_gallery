@@ -4,11 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/ccarrot_gallery?serverTimezone=Asia/Seoul
     username: root
     password: root
-
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: false
@@ -16,5 +11,6 @@ spring:
     hibernate:
       format_sql: true
       ddl-auto: update
+
 server:
   port: 8070
