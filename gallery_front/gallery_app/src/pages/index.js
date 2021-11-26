@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react'; 
 import Footer from '../components/Footer/index.js';
@@ -6,52 +5,60 @@ import Navber from '../components/Navbar/index.js';
 import { imageData } from '../data.js';
 import "../css/Home.css";
 import GalleryItem from '../components/Galleryitem/index.js';
+import LocomotiveScroll from 'locomotive-scroll';
+import '../../node_modules/locomotive-scroll/src/locomotive-scroll.scss';
+import { readConfigFile } from 'typescript';
 
-class Index extends React.Component{
 
-    state={
-        imgdata:[]
-    }
+function Home(){
+
+    useEffect(()=>{
+        if(ref){
+            new LocomotiveScroll({
+                el: ref.current,
+                smooth: true,
+                direction: 'horizontal'
+            })
+        }
+    },[]);
+    const ref = useRef(null);
+
+
+    const images = imageData.map((tupples, index) =>
+    tupples.map((url, elementIndex) => (
+      <GalleryItem
+        key={url}
+        src={url}
+        index={elementIndex}
+        columnOffset={index * 14}
+      />
+    ))
+  );
     
-    Getimg = imageData.map((tupples,index) =>{
-        tupples.map((url, elemenIndex) => (
-        <GalleryItem 
-            key={elemenIndex} 
-            index={url} 
-            src={url} 
-            columnOffset={index*14} 
-        />
-            ));
-    });
-    
 
-    componentDidMount(){// 랜더린될때 맨먼저 랜더링 됨.
-        this.imgdata();
-    }
 
-    render(){
-        return(
-        <>
-            <Navber />
-            <div className='main-container'>
-                <div className='scroll-container'>
-                    <div className='content'>
-                        <div className='gallery'>
-                            <div className='gallery-helper'>Scroll to discover more</div>
-                            <div className='behind-text fill'>
-                                every body loves a good story
-                            </div>
+    return(
+    <>
+        <Navber />
+        <div className='main-container'>
+            <div className='scroll-container' data-scroll-container ref={ref}>
+                <div className='content'>
+                    <div className='gallery'>
+                        {images}
+                        <div className='gallery-helper' data-scroll data-scroll-speed={-1}>Scroll to discover more</div>
+                        <div className='behind-text fill' data-scroll data-scroll-speed={-2}>
+                            every body loves a good story
                         </div>
-                        <Footer />
                     </div>
-
+                    <Footer />
                 </div>
 
             </div>
-        </>
 
-        );
-    }
+        </div>
+    </>
+
+    );
 }
 
 // const scroll = new LocomotiveScroll({
@@ -59,4 +66,4 @@ class Index extends React.Component{
 //     smooth: true
 // });//스크롤 이벤트
 
-export default Index;
+export default Home;
