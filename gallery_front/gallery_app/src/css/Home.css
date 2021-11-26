@@ -6,8 +6,6 @@ body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .main-container { padding-right: 500px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.c-fixed_target { position: absolute; top: -100vh; right: 0; left: 0; bottom: -100vh; }
-
 .scroll-container { margin-right: 500px; }
 
 .content { display: -webkit-box; display: -ms-flexbox; display: flex; height: 100vh; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }

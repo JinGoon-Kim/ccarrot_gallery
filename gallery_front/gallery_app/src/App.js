@@ -1,6 +1,3 @@
-import React from 'react';
-import './App.css';
-import './css/tailwind.css';
 import { 
   BrowserRouter as Router,
   Routes,
