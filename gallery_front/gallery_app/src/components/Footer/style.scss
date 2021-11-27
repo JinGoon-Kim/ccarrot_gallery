@@ -1,0 +1,29 @@
+.footer {
+  height: 100%;
+  width: 100vw;
+  background: #8e2de2;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  z-index: -1;
+  display: grid;
+  place-items: center;
+}
+
+.contact-address {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); //몃개의 컬럼으로 정렬할건지
+  grid-gap: 10%; //간격
+  color: #fff;
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  p {
+    margin: 10px 0 10px;
+  }
+}
