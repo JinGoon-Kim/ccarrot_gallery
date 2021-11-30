@@ -27,7 +27,7 @@ public class Gallery {
     private String gallery_title;
 
     @Column(name = "gallery_content")
-    private Lob gallery_content;
+    private String gallery_content;
 
     @Override
     public boolean equals(Object o) {

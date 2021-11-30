@@ -13,7 +13,7 @@ const addresses = [
         name: "Jin-Gun Kim",
         gitaddress: "https://github.com/JinGoon-Kim",
         phone: "010-4920-9455",
-        email: "OOOO@naver.com",
+        email: "raneata@gmail.com",
     },
   ];
 
