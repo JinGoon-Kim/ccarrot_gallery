@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './style.css'
+import { Link } from 'react-router-dom';
+import './style.css';
 
 function Index(){
 
     return (
         <div className="navbar">
-            <div className="logo">LOGO</div>
+            <div className="logo"><Link to="/">LOGO</Link></div>
             <ul>
                 <li>LOGIN</li>
-                <li>SIGN UP</li>
+                <li><Link to="signup">SIGN UP</Link></li>
             </ul>
         </div>
     );
