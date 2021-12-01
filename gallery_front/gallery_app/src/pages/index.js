@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRef } from 'react'; 
 import Footer from '../components/Footer/index.js';
-import Navber from '../components/Navbar/index.js';
 import { imageData } from '../data.js';
 import "../css/Home.css";
 import GalleryItem from '../components/Galleryitem/index.js';
@@ -39,7 +38,7 @@ function Home(){
 
     return(
     <>
-        <Navber />
+        
         <div className='main-container'>
             <div className='scroll-container' data-scroll-container ref={ref}>
                 <div className='content'>

@@ -10,7 +10,7 @@ const addresses = [
         email: "design795@naver.com",
     },
     {
-        name: "Jin-Gun Kim",
+        name: "Jin-Goon Kim",
         gitaddress: "https://github.com/JinGoon-Kim",
         phone: "010-4920-9455",
         email: "raneata@gmail.com",
