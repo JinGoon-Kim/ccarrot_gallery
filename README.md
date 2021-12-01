@@ -7,12 +7,12 @@ SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
 
 
 ### api 호출
-|entity|Method|call adress|desc|
-|-|------|---|---|
-|members|post|/api/members| insert member|
-|members|get|/api/members|see all member|
-|members|put|/api/members|update one member|
-|members|delete|/api/members|delete one member|
+|entity|Method|call adress|parameter|desc|
+|------|------|-----------|---------|----|
+|members|post|/api/members||insert member|
+|members|get|/api/members||see all member|
+|members|put|/api/members/{id}||update one member|
+|members|delete|/api/members/{id}||delete one member|
 
 #### 초기 기획
 / -> Home <br>
