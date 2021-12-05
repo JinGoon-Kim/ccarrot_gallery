@@ -1,12 +1,17 @@
-[사이트 보기](http://15.165.217.101:3000/)
+[사이트 보기](http://ccarrot.kro.kr/)
 
 # ccarrot_gallery
 SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
+
+### 호스팅 서버
+AWS EC2 Ubuntu
 
 ### 통신
 백엔드 서버와 프론트 서버를 분리하여
 페이지의 요청에 대한 것을 REST API 로 응답 진행
 
+### CI/CD (예정)
+Jankins
 
 ### api 호출
 |entity|Method|call adress|parameter|desc|
