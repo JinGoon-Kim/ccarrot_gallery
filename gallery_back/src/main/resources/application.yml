@@ -11,6 +11,10 @@ spring:
     hibernate:
       format_sql: true
       ddl-auto: create
-
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+      location: /_upload
 server:
   port: 8070
