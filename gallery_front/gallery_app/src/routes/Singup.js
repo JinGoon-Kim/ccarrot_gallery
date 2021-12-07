@@ -24,10 +24,9 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
 
         const headers = {
             'Content-type': 'application/Json; charset=UTF-8',
-            'Accept': '/'
         }
         
-        axios.post("http://15.165.217.101:8070/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
+        axios.post("http://localhost:8070/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
         // axios({
         //     method:'post',
         //     url:'http://15.165.217.101:8070/api/members',
