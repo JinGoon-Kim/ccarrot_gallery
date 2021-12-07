@@ -1,16 +1,16 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ccarrot_gallery?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://15.165.217.101:3306/ccarrot_gallery?serverTimezone=Asia/Seoul
     username: root
-    password: root
+    password: 1rlawlsrns0
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: false
     show-sql: true
     hibernate:
       format_sql: true
-      ddl-auto: create
+      ddl-auto: none
   servlet:
     multipart:
       max-file-size: 20MB
