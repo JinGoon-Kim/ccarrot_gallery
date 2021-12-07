@@ -20,6 +20,11 @@ Jankins
 |members|get|/api/members||see all member|
 |members|put|/api/members/{id}||update one member|
 |members|delete|/api/members/{id}||delete one member|
+|gallery|post|/api/gallery||insert gallery|
+|gallery|get|/api/gallery||see all gallery|
+|gallery|put|/api/gallery/{id}||update one gallery|
+|gallery|delete|/api/gallery/{id}||delete one gallery|
+
 
 #### 초기 기획
 / -> Home <br>
