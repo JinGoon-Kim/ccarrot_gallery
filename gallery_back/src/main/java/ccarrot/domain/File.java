@@ -27,6 +27,9 @@ public class File {
     @Column(name = "file_dir")
     private String file_dir;
 
+    @Column(name = "file_origin_name")
+    private String file_origin_name;
+
     @Column(name = "file_name")
     private String file_name;
 
