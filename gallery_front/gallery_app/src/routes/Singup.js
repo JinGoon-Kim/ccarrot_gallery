@@ -35,7 +35,7 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
             //form은 submit을 할때 항상 새로고치게 되어있다.
             event.preventDefault();//새로고침 안되도록 preventDefault을 해줘야한다.
 
-            axios.post("http://localhost:3000/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
+            axios.post("http://ccarrot.kro.kr:8070/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
             console.log(bodyJson);
         }
 
