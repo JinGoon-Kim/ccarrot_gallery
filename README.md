@@ -45,4 +45,4 @@ Jankins
 /gallery/comments/delete -> Delete A Comment of a artwork <br>
 
 ### 엔티티 구조도
-![엔티티 구조도](https://github.com/JinGoon-Kim/ccarrot_gallery/blob/main/entityManagerFactory(EntityManagerFactoryBuilder).png)
+![엔티티 구조도](https://github.com/JinGoon-Kim/ccarrot_gallery/blob/main/211208entityManagerFactory.png)
