@@ -20,7 +20,7 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
             member_nickname : member_nickname,
         }
 
-        const { handleSubmit, register, watch, clearErrors } = useForm();//mode:'onChange' = 유효성 검사를 할 수 있도록 해준다.
+        const { handleSubmit, register, watch} = useForm();//mode:'onChange' = 유효성 검사를 할 수 있도록 해준다.
 
         let bodyJson = JSON.stringify(body);
         const onSubmit = (event) =>{//항상 첫번째 인자는 event를 받아온다.
@@ -31,7 +31,12 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
         }
 
         const onError = (error) =>{//에러일때 표출
-            alert(error.member_id.message);
+            if(error.member_id) {
+                alert(error.member_id.message);
+                return false;
+            };
+            
+            if(error.password) alert(error.password.message);
         }
 
 
@@ -55,14 +60,19 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
                             className="form-control"
                             {...register('member_id',{
                                 minLength:{
-                                    value: 5,
-                                    message: "아이디는 5글자 이상이어야 합니다."
+                                    value:5,
+                                    message:"아이디는 5글자 이상이어야 합니다."
+                                },
+                                required:{
+                                    value:true,
+                                    message:"아이디는 필수 입력입니다."
                                 }
                             })}//register이 value와 onChange={(e)=> data(e.target.value)} 가 없어도 실행되도록 도와준다.
                             type="text" 
                             name="member_id" 
                             placeholder="user id"
                         />
+                        
                     </div>
 
                     <div className="mb-3">
@@ -72,10 +82,19 @@ function Singup(){//usestate 리엑트 훅을 사용할땐 class를 사용하면
                             type="password" 
                             name="member_password"
                             placeholder="password"
-                            value={password}
-                            onChange={(e)=> setPassword(e.target.value)}
+                            {...register("password",{
+                                minLength:{
+                                    value:4,
+                                    message:"비밀번호는 4글자 이상이어야 합니다."
+                                },
+                                required:{
+                                    value:true,
+                                    message:"비밀번호는 필수값 입니다."
+                                }
+                            })}
                         />
                     </div>
+
 
                     <div className="mb-3">
                         <label className="form-label">Email</label>
