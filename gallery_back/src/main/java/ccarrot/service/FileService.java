@@ -17,11 +17,11 @@ public class FileService {
     private FileRepository fileRepository;
 
     @Transactional
-    public void save_file (MultipartFile mtf) throws Exception{
+    public String save_file (MultipartFile mtf) throws Exception{
         if (mtf == null || mtf.isEmpty()) {
             System.out.println("mtf = " + mtf);
         }
-        String file_dir = System.getProperty("user_dir") + "/resources/static/_upload";
+        String file_dir = "/resources/static/_upload";
         UUID uuid = UUID.randomUUID();
         String file_origin_name = mtf.getOriginalFilename();
         String file_name = uuid + "_" + mtf.getOriginalFilename();
@@ -34,6 +34,8 @@ public class FileService {
         file.setFile_name(file_name);
 
         fileRepository.save(file);
+
+        return file_name;
     }
 
 }

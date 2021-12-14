@@ -94,7 +94,9 @@ function Singup(history){//usestate 리엑트 훅을 사용할땐 class를 사�
                             type="password" 
                             name="member_password"
                             placeholder="password"
+
                             {...register("member_password",{
+
                                 minLength:{
                                     value:4,
                                     message:"비밀번호는 4글자 이상이어야 합니다."
@@ -106,6 +108,7 @@ function Singup(history){//usestate 리엑트 훅을 사용할땐 class를 사�
                             })}
                         />
                     </div>
+
 
                     <div className="mb-3">
                         <label className="form-label">Email</label>
