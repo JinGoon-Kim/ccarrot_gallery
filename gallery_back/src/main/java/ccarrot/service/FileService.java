@@ -18,6 +18,9 @@ public class FileService {
 
     @Transactional
     public void save_file (MultipartFile mtf) throws Exception{
+        if (mtf == null || mtf.isEmpty()) {
+            System.out.println("mtf = " + mtf);
+        }
         String file_dir = System.getProperty("user_dir") + "/resources/static/_upload";
         UUID uuid = UUID.randomUUID();
         String file_origin_name = mtf.getOriginalFilename();

@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,7 +24,7 @@ public class GalleryApiController {
     private final FileService fileService;
 
     @PostMapping("/api/gallery")
-    public CreateGalleryResponse saveGallery (@Valid CreateGalleryRequest request, MultipartFile mtf) {
+    public CreateGalleryResponse saveGallery (@Valid CreateGalleryRequest request, @RequestParam("file") MultipartFile mtf) {
 
         Gallery gallery = new Gallery();
         gallery.setMember_seq(request.getMember_seq());
