@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,20 +25,22 @@ public class GalleryApiController {
     private final FileService fileService;
 
     @PostMapping("/api/gallery")
-    public CreateGalleryResponse saveGallery (@Valid CreateGalleryRequest request, @RequestParam("file") MultipartFile mtf) {
+    public CreateGalleryResponse saveGallery (@Valid CreateGalleryRequest request, @RequestParam("files") MultipartFile mtf) {
+        
+        System.out.println(request);
 
         Gallery gallery = new Gallery();
         gallery.setMember_seq(request.getMember_seq());
         gallery.setGallery_title(request.getGallery_title());
         gallery.setGallery_content(request.getGallery_content());
 
-        Long id = galleryService.insert_gallery(gallery);
-
         try {
-            fileService.save_file(mtf);
+           String file_name = fileService.save_file(mtf);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Long id = galleryService.insert_gallery(gallery);
 
         return new CreateGalleryResponse(id);
     }
@@ -55,7 +58,6 @@ public class GalleryApiController {
         private Member member_seq;
         private String gallery_title;
         private String gallery_content;
-        private String file_origin_name;
     }
 
     @Data
@@ -64,7 +66,6 @@ public class GalleryApiController {
         private Member member_seq;
         private String gallery_title;
         private String gallery_content;
-        private String file_origin_name;
     }
 
     @Data

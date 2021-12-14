@@ -15,6 +15,6 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 100MB
-      location: e:/temp_upload
+      location: e:/temp_upload/
 server:
   port: 8070
