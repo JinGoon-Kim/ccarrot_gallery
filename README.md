@@ -10,7 +10,7 @@ AWS EC2 Ubuntu
 백엔드 서버와 프론트 서버를 분리하여
 페이지의 요청에 대한 것을 REST API 로 응답 진행
 
-### CI/CD (예정)
+### CI/CD
 Jankins
 
 ### api 호출
