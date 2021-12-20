@@ -1,7 +1,10 @@
 package ccarrot.service;
 
 import ccarrot.Repositories.FileRepository;
+import ccarrot.Repositories.GalleryRepository;
 import ccarrot.domain.File;
+import ccarrot.domain.FileType;
+import ccarrot.domain.Gallery;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,9 +18,10 @@ import java.util.UUID;
 public class FileService {
 
     private FileRepository fileRepository;
+    private GalleryRepository galleryRepository;
 
     @Transactional
-    public String save_file (MultipartFile mtf) throws Exception{
+    public String save_file (MultipartFile mtf, Long gallery_id) throws Exception{
         if (mtf == null || mtf.isEmpty()) {
             System.out.println("mtf = " + mtf);
         }
@@ -32,6 +36,11 @@ public class FileService {
         file.setFile_dir(file_dir);
         file.setFile_origin_name(file_origin_name);
         file.setFile_name(file_name);
+        file.setFile_type(FileType.IMG);
+
+        Gallery target_gallery = galleryRepository.findOne(gallery_id);
+
+        file.setGallery_seq(target_gallery);
 
         fileRepository.save(file);
 
