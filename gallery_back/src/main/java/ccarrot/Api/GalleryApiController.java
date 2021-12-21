@@ -1,6 +1,5 @@
 package ccarrot.Api;
 
-import ccarrot.domain.File;
 import ccarrot.domain.Gallery;
 import ccarrot.domain.Member;
 import ccarrot.service.FileService;
@@ -10,12 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor
@@ -31,10 +27,7 @@ public class GalleryApiController {
                                               String gallery_content,
                                               @RequestParam("files") MultipartFile mtf) {
 
-        Member write_member = new Member();
-        write_member = memberService.findOne(member_seq);
-
-        System.out.println("mtf = " + mtf);
+        Member write_member = memberService.findOne(member_seq);
 
         Gallery gallery = new Gallery();
         gallery.setMember_seq(write_member);
@@ -45,7 +38,7 @@ public class GalleryApiController {
         System.out.println("id = " + id);
 
         try {
-           String file_name = fileService.save_file(mtf, id);
+           fileService.save_file(mtf, id);
         } catch (Exception e) {
             e.printStackTrace();
         }
