@@ -11,7 +11,8 @@ AWS EC2 Ubuntu
 페이지의 요청에 대한 것을 REST API 로 응답 진행
 
 ### CI/CD
-Jankins
+BackEnd : Jankins <br>
+FrontEnd : 수동 업로드
 
 ### api 호출
 |entity|Method|call adress|parameter|desc|
