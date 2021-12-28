@@ -19,10 +19,12 @@ FrontEnd : 수동 업로드
 |------|------|-----------|---------|----|
 |members|post|/api/members||insert member|
 |members|get|/api/members||see all member|
+|members|get|/api/members/{id}||see one member|
 |members|patch|/api/members/{id}||update one member|
 |members|delete|/api/members/{id}||delete one member|
 |gallery|post|/api/gallery||insert gallery|
 |gallery|get|/api/gallery||see all gallery|
+|members|get|/api/gallery/{id}||see one gallery|
 |gallery|patch|/api/gallery/{id}||update one gallery|
 |gallery|delete|/api/gallery/{id}||delete one gallery|
 
