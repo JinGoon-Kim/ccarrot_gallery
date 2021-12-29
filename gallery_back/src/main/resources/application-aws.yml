@@ -1,3 +1,5 @@
+# jar 실행법 : java -jar XXX.jar --spring.profiles.active=aws
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +20,8 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 100MB
-      location: e:\Dropbox\GitHub\ccarrot_gallery\gallery_back\src\main
+      location: /home/ubuntu
 server:
   port: 8030
+
+
