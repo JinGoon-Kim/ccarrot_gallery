@@ -22,10 +22,10 @@ public class File {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="gallery_seq")
     @ToString.Exclude
-    private Gallery gallery_seq;
+    private Gallery gallerySeq;
 
     @Column(name = "file_dir")
-    private String file_dir;
+    private String fileDir;
 
     @Column(name = "file_origin_name")
     private String file_origin_name;

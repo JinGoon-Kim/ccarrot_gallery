@@ -1,4 +1,4 @@
-package ccarrot.Api;
+package ccarrot.controller.api.v1;
 
 import ccarrot.domain.Member;
 import ccarrot.domain.RoleType;

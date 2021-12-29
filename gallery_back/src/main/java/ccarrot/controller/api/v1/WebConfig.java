@@ -1,4 +1,4 @@
-package ccarrot.Api;
+package ccarrot.controller.api.v1;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -14,7 +14,8 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "http://localhost:3000",
                         "http://ccarrot.kro.kr:3000",
-                        "http://ccarrot.kro.kr"
+                        "http://ccarrot.kro.kr",
+                        "/**"
                 );
     }
 
