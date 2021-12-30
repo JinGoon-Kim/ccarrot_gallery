@@ -17,16 +17,16 @@ FrontEnd : 수동 업로드
 ### api 호출
 |entity|Method|call adress|parameter|desc|
 |------|------|-----------|---------|----|
-|members|post|/api/members||insert member|
-|members|get|/api/members||see all member|
-|members|get|/api/members/{id}||see one member|
-|members|patch|/api/members/{id}||update one member|
-|members|delete|/api/members/{id}||delete one member|
-|gallery|post|/api/gallery||insert gallery|
-|gallery|get|/api/gallery||see all gallery|
-|members|get|/api/gallery/{id}||see one gallery|
-|gallery|patch|/api/gallery/{id}||update one gallery|
-|gallery|delete|/api/gallery/{id}||delete one gallery|
+|members|post|v1/api/members||insert member|
+|members|get|v1/api/members||see all member|
+|members|get|v1/api/members/{id}||see one member|
+|members|patch|v1/api/members/{id}||update one member|
+|members|delete|v1/api/members/{id}||delete one member|
+|gallery|post|v1/api/gallery||insert gallery|
+|gallery|get|v1/api/gallery||see all gallery|
+|members|get|v1/api/gallery/{id}||see one gallery|
+|gallery|patch|v1/api/gallery/{id}||update one gallery|
+|gallery|delete|v1/api/gallery/{id}||delete one gallery|
 
 
 #### 초기 기획
