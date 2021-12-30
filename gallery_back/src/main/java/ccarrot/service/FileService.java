@@ -1,12 +1,13 @@
 package ccarrot.service;
 
-import ccarrot.Repositories.FileRepository2;
+import ccarrot.Repositories.FileRepository;
 import ccarrot.Repositories.GalleryRepository;
 import ccarrot.domain.File;
 import ccarrot.domain.FileType;
 import ccarrot.domain.Gallery;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Objects;
@@ -16,10 +17,11 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class FileService {
 
-//    private final FileRepository fileRepository;
-    private final FileRepository2 fileRepository2;
+    private final FileRepository fileRepository;
+//    private final FileRepository2 fileRepository2;
     private final GalleryRepository galleryRepository;
 
+    @Transactional
     public void save_file (MultipartFile mtf, Long gallery_id) throws Exception{
         if (mtf == null || mtf.isEmpty()) {
             System.out.println("mtf = " + mtf);
@@ -46,8 +48,8 @@ public class FileService {
 
         file.setGallerySeq(target_gallery);
 
-//        fileRepository.save(file);
-        fileRepository2.save(file);
+        fileRepository.save(file);
+//        fileRepository2.save(file);
     }
 
 }

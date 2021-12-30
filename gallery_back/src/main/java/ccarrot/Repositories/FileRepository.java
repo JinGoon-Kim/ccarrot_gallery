@@ -9,21 +9,11 @@ import java.util.List;
 @Repository
 public class FileRepository {
 
-//    @PersistenceContext
-//    private EntityManager em;
-
+    @PersistenceContext
+    private EntityManager em;
 
     public void save(File file) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("db");
-        EntityManager em = emf.createEntityManager();
-
-        EntityTransaction tx = em.getTransaction();
-
-        tx.begin();
-
         em.persist(file);
-
-        tx.commit();
     }
 
     public File findOne(Long id) {

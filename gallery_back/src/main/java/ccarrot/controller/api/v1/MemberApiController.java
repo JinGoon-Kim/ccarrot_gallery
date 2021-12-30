@@ -15,11 +15,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/v1/api")
 public class MemberApiController {
 
     private final MemberService memberService;
 
-    @PostMapping("/api/members")
+    @PostMapping("/members")
     public CreateMemberResponse saveMember (@RequestBody @Valid CreateMemberRequest request) {
 
         Member member = new Member();
@@ -34,7 +35,7 @@ public class MemberApiController {
         return new CreateMemberResponse(id);
     }
 
-    @GetMapping("/api/members")
+    @GetMapping("/members")
     public MemberList findAllMember () {
         List<Member> findMembers = memberService.findMember();
         List<MemberDto> collect = findMembers.stream()
