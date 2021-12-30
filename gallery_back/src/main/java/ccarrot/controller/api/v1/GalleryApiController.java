@@ -7,6 +7,7 @@ import ccarrot.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,6 +20,7 @@ public class GalleryApiController {
     private final GalleryUploadService galleryUploadService;
 
     @PostMapping("/gallery")
+    @Transactional
     public CreateGalleryResponse saveGallery (Long member_seq,
                                               String gallery_title,
                                               String gallery_content,

@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### _upload file
-/src/main/resources/static/_upload/
+/src/main/resources/static/_upload/*

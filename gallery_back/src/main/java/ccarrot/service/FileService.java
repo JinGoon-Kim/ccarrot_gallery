@@ -6,6 +6,9 @@ import ccarrot.domain.File;
 import ccarrot.domain.FileType;
 import ccarrot.domain.Gallery;
 import lombok.RequiredArgsConstructor;
+
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,12 +16,16 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Objects;
 import java.util.UUID;
 
+
+
 @Service
 @RequiredArgsConstructor
 public class FileService {
 
+    @Value("${spring.servlet.multipart.location}")
+    private String ROOT_PATH;
+
     private final FileRepository fileRepository;
-//    private final FileRepository2 fileRepository2;
     private final GalleryRepository galleryRepository;
 
     @Transactional
@@ -26,7 +33,10 @@ public class FileService {
         if (mtf == null || mtf.isEmpty()) {
             System.out.println("mtf = " + mtf);
         }
-        String file_dir = "/resources/static/_upload";
+
+        String file_dir = ROOT_PATH + "/resources/static/_upload";
+        String db_file_dir = "/resources/static/_upload";
+
         UUID uuid = UUID.randomUUID();
         String file_origin_name = mtf.getOriginalFilename();
         String file_name = uuid + "_" + mtf.getOriginalFilename();
@@ -39,7 +49,7 @@ public class FileService {
         if (Objects.equals(temp_arr[0], "image")) file_type = FileType.IMG;
 
         File file = new File();
-        file.setFileDir(file_dir);
+        file.setFileDir(db_file_dir);
         file.setFile_origin_name(file_origin_name);
         file.setFile_name(file_name);
         file.setFile_type(file_type);
