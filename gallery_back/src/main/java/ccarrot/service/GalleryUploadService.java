@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 @RequiredArgsConstructor
-public class GalleryApiService {
+public class GalleryUploadService {
 
     private final GalleryService galleryService;
     private final FileService fileService;
@@ -16,15 +16,11 @@ public class GalleryApiService {
     @Transactional
     public Long save(Gallery gallery, MultipartFile mtf) {
         Long id = galleryService.insert_gallery(gallery);
-
-        System.out.println("id = " + id);
-
         try {
             fileService.save_file(mtf, id);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return id;
     }
 
