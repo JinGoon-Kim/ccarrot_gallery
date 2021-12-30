@@ -20,7 +20,7 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 100MB
-      location: /home/ubuntu/ccarrot_gallery
+      location: /home/ubuntu/ccarrot_gallery/gallery_back/src/main
 server:
   port: 8070
 
