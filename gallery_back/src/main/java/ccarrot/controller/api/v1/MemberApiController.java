@@ -44,6 +44,12 @@ public class MemberApiController {
         return new MemberList(collect.size(), collect);
     }
 
+    @GetMapping("/members/{id}")
+    public Member findOneMemberForId (@PathVariable("id") Long id) {
+        Member findMembers = memberService.findOne(id);
+        return findMembers;
+    }
+
     @Data
     static class CreateMemberRequest {
         private RoleType member_type;
