@@ -20,4 +20,4 @@ spring:
       max-request-size: 100MB
       location: e:\Dropbox\GitHub\ccarrot_gallery\gallery_back\src\main
 server:
-  port: 8030
+  port: 8070
