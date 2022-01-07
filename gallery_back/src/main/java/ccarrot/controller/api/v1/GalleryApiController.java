@@ -52,6 +52,13 @@ public class GalleryApiController {
         return new GalleryList(collect.size(), collect);
     }
 
+    @GetMapping("/gallery/{id}")
+    @Transactional
+    public Gallery ViewOneGallery(@PathVariable("id") Long id) {
+        Gallery findGallery = galleryService.findOne(id);
+        return findGallery;
+    }
+
     @Data
     private class CreateGalleryResponse {
         private Long id;
