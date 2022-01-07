@@ -18,6 +18,8 @@ public class GalleryRepository {
     }
 
     public Gallery findOne(Long id) {
+        em.createQuery("SELECT g FROM Gallery g WHERE g.id = :id", Gallery.class)
+                .getResultList();
         return em.find(Gallery.class, id);
     }
 
