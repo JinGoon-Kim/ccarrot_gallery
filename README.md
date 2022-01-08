@@ -1,4 +1,4 @@
-[사이트 보기](http://ccarrot.kro.kr/)
+[사이트 보기(호스팅 일시중단됨)](http://ccarrot.kro.kr/)
 
 # ccarrot_gallery
 SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
