@@ -15,19 +15,19 @@ BackEnd : Jankins <br>
 FrontEnd : 수동 업로드
 
 ### api 호출
-|entity|Method|call adress|parameter|desc|
-|------|------|-----------|---------|----|
-|members|post|v1/api/members||insert member|
-|members|get|v1/api/members||see all member|
-|members|get|v1/api/members/{id}||see one member|
-|members|patch|v1/api/members/{id}||update one member|
-|members|delete|v1/api/members/{id}||delete one member|
-|gallery|post|v1/api/gallery||insert gallery|
-|gallery|get|v1/api/gallery||see all gallery|
-|gallery|get|v1/api/gallery/{id}||see one gallery|
-|gallery|patch|v1/api/gallery/{id}||update one gallery|
-|gallery|delete|v1/api/gallery/{id}||delete one gallery|
-|file|get|v1/api/file/{file_name}||see one file(text or img)|
+|entity|Method|call adress|parameter|desc|Available|
+|------|------|-----------|---------|----|---------|
+|members|post|v1/api/members||insert member|possibility|
+|members|get|v1/api/members||see all member|possibility|
+|members|get|v1/api/members/{id}||see one member|possibility|
+|members|patch|v1/api/members/{id}||update one member||
+|members|delete|v1/api/members/{id}||delete one member||
+|gallery|post|v1/api/gallery||insert gallery|possibility|
+|gallery|get|v1/api/gallery||see all gallery||
+|gallery|get|v1/api/gallery/{id}||see one gallery||
+|gallery|patch|v1/api/gallery/{id}||update one gallery||
+|gallery|delete|v1/api/gallery/{id}||delete one gallery||
+|file|get|v1/api/file/{file_name}||see one file(text or img)|possibility|
 
 #### 초기 기획
 / -> Home <br>
