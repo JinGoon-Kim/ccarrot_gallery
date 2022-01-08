@@ -24,10 +24,10 @@ FrontEnd : 수동 업로드
 |members|delete|v1/api/members/{id}||delete one member|
 |gallery|post|v1/api/gallery||insert gallery|
 |gallery|get|v1/api/gallery||see all gallery|
-|members|get|v1/api/gallery/{id}||see one gallery|
+|gallery|get|v1/api/gallery/{id}||see one gallery|
 |gallery|patch|v1/api/gallery/{id}||update one gallery|
 |gallery|delete|v1/api/gallery/{id}||delete one gallery|
-
+|file|get|v1/api/file/{file_name}||see one file(text or img)|
 
 #### 초기 기획
 / -> Home <br>
