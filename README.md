@@ -29,23 +29,5 @@ FrontEnd : 수동 업로드
 |gallery|delete|v1/api/gallery/{id}||delete one gallery||
 |file|get|v1/api/file/{file_name}||see one file(text or img)|possibility|
 
-#### 초기 기획
-/ -> Home <br>
-/join -> Join <br>
-/login -> Login <br>
-/search -> Search <br>
-<br>
-/api/members/:id -> See one member <br>
-/api/members/logout -> Log Out <br>
-/api/members/edit -> Edit My Profile <br>
-/api/members/delete -> Delete My Profile <br>
-<br>
-/gallery/:id -> See gallery <br>
-/gallery/:id/edit -> Edit artwork <br>
-/gallery/:id/delete -> Delete artwork <br>
-/gallery/upload -> Upload artwork <br>
-/gallery/comments -> Comment on a artwork <br>
-/gallery/comments/delete -> Delete A Comment of a artwork <br>
-
 ### 엔티티 구조도
 ![엔티티 구조도](https://github.com/JinGoon-Kim/ccarrot_gallery/blob/main/211208entityManagerFactory.png)
