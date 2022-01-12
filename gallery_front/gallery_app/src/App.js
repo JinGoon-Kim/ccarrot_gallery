@@ -6,6 +6,7 @@ import {
 import Index from "./pages/index.js";
 import Singup from './routes/Singup.js';
 import Navber from './components/Navbar/index.js';
+import Gallery from './routes/gallery.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Index />} />
         <Route path='/signup' element={<Singup />} />
+        <Route path='/gallery' element={<Gallery/>}/>
       </Routes>
     </Router>
   )
