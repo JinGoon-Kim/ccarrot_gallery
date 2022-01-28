@@ -1,4 +1,4 @@
-[사이트 보기(호스팅 일시중단됨)](http://ccarrot.kro.kr/)
+[사이트 보기](http://ccarrot.kro.kr/)
 
 # ccarrot_gallery
 SpringBoot Gradle, React.js, MySQL 을 사용한 연습용 게시판입니다.
@@ -15,6 +15,7 @@ BackEnd : Jankins <br>
 FrontEnd : 수동 업로드
 
 ### api 호출
+[백엔드서버 보기](http://ccarrot.kro.kr:8070/v1/api/members)
 |entity|Method|call adress|parameter|desc|Available|
 |------|------|-----------|---------|----|---------|
 |members|post|v1/api/members||insert member|possibility|
