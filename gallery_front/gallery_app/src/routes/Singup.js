@@ -23,14 +23,14 @@ function Singup(history){//usestate 리엑트 훅을 사용할땐 class를 사�
 
         const { handleSubmit, register, watch} = useForm();//mode:'onChange' = 유효성 검사를 할 수 있도록 해준다.
 
-        let bodyJson = JSON.stringify(watch());//제이슨을 문자열로 변경해준다.
         
-        const onSubmit = (event) =>{//항상 첫번째 인자는 event를 받아온다.
+        
+        const onSubmit = (data) =>{//항상 첫번째 인자는 event를 받아온다.
             //form은 submit을 할때 항상 새로고치게 되어있다.
-            axios.post("http://ccarrot.kro.kr:8070/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
+            let bodyJson = JSON.stringify(data);//제이슨을 문자열로 변경해준다.
+            axios.post("http://ccarrot.kro.kr:8070/v1/api/members", bodyJson, {headers : headers}).then((res) => console.log(res));
             alert('회원가입이 완료되었습니다.');
-            document.location.href ="/";
-         
+            //document.location.href ="/";
 
         }
 
